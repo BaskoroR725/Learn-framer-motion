@@ -3,6 +3,7 @@
 import FlippingCardBack from "./components/FlippingCardBackSide"; */
 }
 import AnimateCard from "./components/AnimateCard";
+import ImageGallery from "./components/ImageGallery";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
 
       {/*Animated card */}
       <AnimateCard />
+      <ImageGallery />
     </div>
   );
 }
