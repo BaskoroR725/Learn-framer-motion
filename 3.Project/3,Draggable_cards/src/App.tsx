@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import DraggableCards from "./components/DraggableCards"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+export default function App (){
+  return(
+    <div>
+      <div className="flex justify-center items-center h-[100vh] bg-[#f3f3f3]" >
+        <DraggableCards 
+          style={{
+            background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+          }}
+        >
+          Card 1
+        </DraggableCards>
+        <DraggableCards 
+          style={{
+            background: 'linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)'
+          }}
+        >
+          Card 2
+        </DraggableCards>
+        <DraggableCards 
+          style={{
+              background: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%)",
+            }}
+        >
+          Card 3
+        </DraggableCards>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
-
-export default App
